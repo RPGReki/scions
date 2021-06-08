@@ -1,0 +1,52 @@
+---
+title: "All Crystal Down: Scions Posts"
+layout: 2020/base
+excerpt: "All Crystal Down: Scions Posts of 0xReki's Web Novel Space"
+---
+<h1>All Crystal Down: Scions Posts</h1>
+
+<p class="social icons">
+  {% if page.feed %}
+  <link rel="alternate" type="application/atom+xml" href="{{ page.feed | absolute_url }}" title="{{ page.book.title }} Blog Atom Feed">
+  <a rel="alternate" type="application/atom+xml"
+   href="{{ page.feed | absolute_url }}"
+   title="{{ page.book.title }} Blog Atom Feed">
+    <img src="{{ '/assets/images/feed.png' | prepend: site.staticUrl | absolute_url }}" alt="Atom Feed">
+  </a>
+  {% endif %}
+</p>
+
+{% assign ps = site.posts | where: 'series', 'scions' %}
+{% for post in ps %}
+  <article itemscope itemtype="https://schema.org/BlogPosting" class="interface top-toggle hentry">
+    <h2 itemprop="name" id="{{ post.title | slugify }}" class="inactive entry-title" onclick="toggleAccordion(this)">
+        {{ post.title }}
+    </h2>
+    <meta itemprop="headline" content="{{ post.title }}">
+    {% assign author = site.data.staff | where: "id", page.author | last %}
+    <div itemprop="author" class="my-0" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="{{ author.name }}">
+      <meta itemprop="url" content="{{ author.url }}">
+    </div>
+    {% assign publisher = site.data.staff | where: "id", page.publisher | last %} 
+    <div itemprop="publisher" class="my-0" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="{{ publisher.name }}">
+      <meta itemprop="url" content="{{ publisher.url }}">
+    </div>
+    <meta itemprop="url" content="{{ post.series | prepend: '/' | absolute_url }}/blog/#{{ post.title | slugify }}">
+    <p class="float-left"><small>
+      published on <span itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}" class="published">{{ post.date | date: "%Y-%m-%d" }}</span>
+    </small></p>
+    <meta itemprop="dateModified" content="{{ post.last_modified_at | date_to_xmlschema }}">
+    <div class="clearfix"></div>
+    <div class="my-0" itemprop="image" itemscope itemtype="https://schema.org/URL">
+      <meta itemprop="url" content="{{ "/scions/itunes.png" | prepend: staticUrl |absolute_url }}">
+    </div>
+    <div class="entry-summary">
+      {{ post.content | markdownify }}
+    </div>
+  </article>
+{% endfor %}
+
+<!-- hash: 'sha256-A/6tayyJsMPqwtgAhK04WODhXkp9eACr3P/J3fXItRY=' -->
+<script>function openHash(hash){$('.bg-success').removeClass('bg-success');$(hash).addClass('bg-success').parents('.interface').children('.inactive').addClass('active');$('html').scrollTop($(hash).offset().top);}if (window.location.hash!=""){document.addEventListener('DOMContentLoaded',function(){openHash(window.location.hash)},false)}</script>
