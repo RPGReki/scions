@@ -1,4 +1,4 @@
-# scions
+# Crystal Down: Scions
 Crystal Down: Scions is an unfinished Fantasy Slice of Life Web Novel / Web Fiction / Web Serial. The story is currently on hiatus.
 
 ## Crystal Down: Scions Synopsis
