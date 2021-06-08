@@ -33,7 +33,7 @@ excerpt: "All Crystal Down: Scions Posts of 0xReki's Web Novel Space"
       <meta itemprop="name" content="{{ publisher.name }}">
       <meta itemprop="url" content="{{ publisher.url }}">
     </div>
-    <meta itemprop="url" content="{{ post.series | prepend: '/' | absolute_url }}/blog/#{{ post.title | slugify }}">
+    <meta itemprop="url" content="{{ post.category | first | prepend: '/' | absolute_url }}/blog/#{{ post.title | slugify }}">
     <p class="float-left"><small>
       published on <span itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}" class="published">{{ post.date | date: "%Y-%m-%d" }}</span>
     </small></p>
