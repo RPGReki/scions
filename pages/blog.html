@@ -11,7 +11,7 @@ excerpt: "All Crystal Down: Scions Posts of 0xReki's Web Novel Space"
   <a rel="alternate" type="application/atom+xml"
    href="{{ page.feed | absolute_url }}"
    title="{{ page.book.title }} Blog Atom Feed">
-    <img src="{{ '/assets/images/feed.png' | prepend: site.staticUrl | absolute_url }}" alt="Atom Feed">
+    <img src="{{ '/assets/images/feed.png' | prepend: site.static_url | absolute_url }}" alt="Atom Feed">
   </a>
   {% endif %}
 </p>
@@ -40,7 +40,7 @@ excerpt: "All Crystal Down: Scions Posts of 0xReki's Web Novel Space"
     <meta itemprop="dateModified" content="{{ post.last_modified_at | date_to_xmlschema }}">
     <div class="clearfix"></div>
     <div class="my-0" itemprop="image" itemscope itemtype="https://schema.org/URL">
-      <meta itemprop="url" content="{{ "/scions/itunes.png" | prepend: staticUrl |absolute_url }}">
+      <meta itemprop="url" content="{{ "/scions/itunes.png" | prepend: static_url |absolute_url }}">
     </div>
     <div class="entry-summary">
       {{ post.content | markdownify }}
