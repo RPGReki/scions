@@ -1,12 +1,14 @@
 ---
 layout: 2020/base
-title: "Crystal Down: Scions"
+title: "Crystal Down: Scions Web Novel Overview"
 date: 2020-01-12
 shortlink: /s/1/
 excerpt: |
   Twin orphans grow up in a remote village. They don't know much about their origins but their foster
   never tells them anything. All they have as the pendants they have. This is a story set in the same
   world as Crystal Down.
+book:
+  series: "Crystal Down: Scions"
 feed: /scions/chapters.xml
 scribblehub: https://www.scribblehub.com/series/82746/crystal-down-scions-children-of-light-and-darkness/
 ---
@@ -50,39 +52,13 @@ scribblehub: https://www.scribblehub.com/series/82746/crystal-down-scions-childr
 </script>
 
 <!-- markdownlint-disable MD025 -->
-# Crystal Down: Scions Web Novel Overview
+# {{ page.title }}
 
-<!-- markdownlint-disable MD033 -->
-<p class="social icons">
-  {% if page.feed %}
-  <link rel="alternate" type="application/atom+xml" href="{{ page.feed | absolute_url }}" title="{{ page.book.title }} Chapters Atom Feed">
-  <a rel="alternate" type="application/atom+xml"
-   href="{{ page.feed | absolute_url }}"
-   title="{{ page.book.title }} Chapters Atom Feed">
-    <img src="{{ '/assets/images/feed.png' | prepend: site.static_url | absolute_url }}" alt="Atom Feed">
-  </a>
-  {% endif %}
-  {% if page.scribblehub %}
-  <a href="{{ page.scribblehub }}" rel="alternate"
-    target="_blank" rel="noopener nofollow" title="{{ page.book.title }} on Scribble Hub">
-    <img src="{{ '/assets/images/scribblehub.png' | prepend: site.static_url | absolute_url }}" alt="Scribble Hub">
-  </a>
-  {% endif %}
-  {% if page.wattpad %}
-  <a href="{{ page.wattpad }}" rel="alternate"
-    target="_blank" rel="noopener nofollow" title="{{ page.book.title }} on Wattpad">
-    <img src="{{ '/assets/images/wattpad.png' | prepend: site.static_url | absolute_url }}" alt="Wattpad">
-  </a>
-  {% endif %}
-</p>
-<!-- markdownlint-enable MD033 -->
+{% include series-overview/urls.html %}
 
 ## Disclaimer
 
-This is a work of fiction.
-Names, characters, places, and incidents are the product of the author's imagination or are used fictitiously.
-Any resemblance to actual events, locales, or persons, living or dead, is coincidental.
-
+{% include series-overview/disclaimer.md %}
 
 ## Volume 01: Children of Light and Darkness
 
@@ -93,11 +69,17 @@ Any resemblance to actual events, locales, or persons, living or dead, is coinci
 <img src="{{ page.path | replace: 'index.md', 'thumbnail.png' | prepend: '/' | prepend: site.static_url }}" alt="Crystal Down: Scions Cover: a black and a white cat form a circle">
 </div>
 <div class="col-12 col-md-9">
-Twin orphans grow up in a remote village. They don't know much about their
-origins, but their foster grandfather never tells them anything. All they have
-of their real parents are the pendants they have always worm. Their peaceful
-world crumbles when they're forced to leave the country — and thus are forced to
-leave their village.
+<p>
+Twin orphans grow up in a remote village.
+They don't know much about their origins, but their foster grandfather never tells them anything.
+All they have of their real parents are the pendants they have always worm.
+Their peaceful world crumbles when they're forced to leave the country — and thus are forced to leave their village.
+</p>
+<p>
+This story is set in the the same universe as <a href="{{'/crystaldown/' | absolute_url }}">Crystal Down</a>.
+</p>
+
+<h3 class="mt-3">Children of Light and Darness Chapters</h3>
 
 {% assign pages = site.pages
   | where: "lang", "en-CA"
@@ -105,18 +87,15 @@ leave their village.
   | where: "book.series", "Crystal Down: Scions"
   | where: "book.number", 1
   | sort: "chapter" %}
-<h3 class="mt-3">Children of Light and Darness Chapters</h3>
 
-<ol start="0">{% for page in pages %}
-{% if jekyll.environment != "unpublished" and page.published == "sponsors" %}{% break %}{% endif %}
-  <li><a href="{{ page.url }}">{{page.title}}</a></li>{% endfor %}
-</ol>
+{% include series-overview/chapter-list.html %}
+
+</div>
+</div>
 <!-- markdownlint-enable MD033 -->
-</div>
-</div>
+
 [Prologue](./01-children-of-light-and-darkness/00-prologue/){:id="next" style="display: none"}
 
 ### Glossary
 
 See the [Crystal Down Glossary](/crystaldown/glossary/){:.btn .btn-large .btn-primary}.
-
