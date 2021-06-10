@@ -11,6 +11,8 @@ redirect_from:
 
 checker:
   - pwa
+  - lt
+
 editor: 
   - jayfeather
 
@@ -39,7 +41,7 @@ She slowly lies down while the man prepares a pit fire with the few wood and too
 
 Finally, managing to finish lighting the fire, the man turns towards the woman.
 He holds her hand.
-Liquid flows out the woman — she's giving birth.
+Liquid flows out of the woman — she's giving birth.
 The man keeps holding the woman's hand.
 The labour is draining the woman. She screams in pain.
 Finally, the child is out. It's crying.
@@ -64,7 +66,7 @@ He punches the ground in despair.
 
 After an hour of mourning, he mixes up juice and gives the babies to drink.
 He takes the necklace of the woman and breaks the pendant in two.
-Each part, he ties the parts to a necklace each and gives one to each of the children.
+Each of the parts, he ties the parts to a necklace each and gives one to each of the children.
 He then uses magic to dig a hole in the cave and buries the woman.
 Upon offering a prayer, he picks up the children and leaves the cave.
 The rain has stopped, and the sun is rising.
@@ -79,7 +81,7 @@ He sighs heavily.
 The young man leaves the house alone.
 The children stay with the middle-aged man.
 The young man starts shedding tears again.
-As he leaves the village he mutters: “Live happy and peaceful lives, my sons.
+As he leaves the village, he mutters: “Live happy and peaceful lives, my sons.
 You are in good hands here in Islesbury.
 Please don't look for your past, Aiden, Ethan.
 It will bring you only pain and suffering…”
