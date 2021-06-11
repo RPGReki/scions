@@ -66,7 +66,11 @@ scribblehub: https://www.scribblehub.com/series/82746/crystal-down-scions-childr
 <div class="row">
 
 <div class="col-12 col-md-3">
+{% if page.canonical_domain %}
+<img src="thumbnail.png" alt="Crystal Down: Scions Cover: a black and a white cat form a circle">
+{% else %}
 <img src="{{ page.path | replace: 'index.md', 'thumbnail.png' | prepend: '/' | prepend: site.static_url }}" alt="Crystal Down: Scions Cover: a black and a white cat form a circle">
+{% endif %}
 </div>
 <div class="col-12 col-md-9">
 <p>
