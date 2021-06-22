@@ -12,4 +12,4 @@ gem "jekyll-last-modified-at", "~> 1.3"
 
 gem "jekyll-include-cache"
 
-gem "jekyll-wns", "~> 3.2"
+gem "jekyll-wns"
