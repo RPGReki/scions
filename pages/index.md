@@ -9,6 +9,10 @@ excerpt: |
   world as Crystal Down.
 book:
   series: "Crystal Down: Scions"
+intermediate_breadcrumbs:
+  -
+    title: Archived Projects
+    url: /archive/
 feed: /scions/chapters.xml
 scribblehub: https://www.scribblehub.com/series/82746/crystal-down-scions-children-of-light-and-darkness/
 ---

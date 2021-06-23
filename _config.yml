@@ -79,6 +79,10 @@ defaults:
       published: true
       image: /assets/images/site-og.png
       canonical_domain: https://0xreki.de/scions
+      intermediate_breadcrumbs:
+        -
+          title: Archived Projects
+          url: /archive/
   - # /_posts
     scope:
       path: "_posts"
@@ -96,6 +100,10 @@ defaults:
       image: /assets/images/site-og.png
       permalink: /:year/:month-:day-:title/
       canonical_domain: https://0xreki.de/scions
+      intermediate_breadcrumbs:
+        -
+          title: Archived Projects
+          url: /archive/
   - # /01-children-of-light-and-darkness
     scope:
       path: "/01-children-of-light-and-darkness"
@@ -105,7 +113,6 @@ defaults:
       lang: "en-CA"
       author: reki
       publisher: reki
-      additional_js: hyphenate
       published: true
       termbase: /crystaldown
       book:
@@ -121,3 +128,7 @@ defaults:
           - Slice of Life
       image: /assets/images/site-og.png
       canonical_domain: https://0xreki.de/scions
+      intermediate_breadcrumbs:
+        -
+          title: Archived Projects
+          url: /archive/
