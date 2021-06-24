@@ -8,6 +8,7 @@ shortlink: /s/1/0/
 
 redirect_from:
   - /scions/01-children-of-darkness-and-light/00-prologue/
+  - /scions/00-prologue/
 
 checker:
   - pwa
