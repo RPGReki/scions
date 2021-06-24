@@ -75,9 +75,9 @@ defaults:
       lang: "en-CA"
       author: reki
       publisher: reki
-      image: /assets/images/site-og.png
+      image: /assets/images/site-og.webp
       published: true
-      image: /assets/images/site-og.png
+      image: /assets/images/site-og.webp
       canonical_domain: https://0xreki.de/scions
       intermediate_breadcrumbs:
         -
@@ -93,11 +93,11 @@ defaults:
       lang: "en-CA"
       author: reki
       publisher: reki
-      image: /assets/images/site-og.png
+      image: /assets/images/site-og.webp
       comments: true
       commenting: open
       published: true
-      image: /assets/images/site-og.png
+      image: /assets/images/site-og.webp
       permalink: /:year/:month-:day-:title/
       canonical_domain: https://0xreki.de/scions
       intermediate_breadcrumbs:
@@ -126,7 +126,7 @@ defaults:
           - Fantasy
           - LitRPG
           - Slice of Life
-      image: /assets/images/site-og.png
+      image: /assets/images/site-og.webp
       canonical_domain: https://0xreki.de/scions
       intermediate_breadcrumbs:
         -
