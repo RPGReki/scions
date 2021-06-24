@@ -3,6 +3,8 @@ layout: compress
 book:
   title: "Crystal Down: Scions"
   url: /scions/
+redirect_from:
+  - /feeds/scions/chapters.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 {% assign pages = site.pages | where: "type", "chapter" | where: 'book.series', page.book.title | sort_natural: "date" | reverse %}
