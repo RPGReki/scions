@@ -71,9 +71,9 @@ scribblehub: https://www.scribblehub.com/series/82746/crystal-down-scions-childr
 
 <div class="col-12 col-md-3">
 {% if page.canonical_domain %}
-<img src="thumbnail.webp" alt="Crystal Down: Scions Cover: a black and a white cat form a circle">
+<img loading="lazy"src="thumbnail.webp" alt="Crystal Down: Scions Cover: a black and a white cat form a circle">
 {% else %}
-<img src="{{ '/scions/thumbnail.webp' | prepend: site.static_url | absolute_url }}" alt="Crystal Down: Scions Cover: a black and a white cat form a circle">
+<img loading="lazy"src="{{ '/scions/thumbnail.webp' | prepend: site.static_url | absolute_url }}" alt="Crystal Down: Scions Cover: a black and a white cat form a circle">
 {% endif %}
 </div>
 <div class="col-12 col-md-9">
