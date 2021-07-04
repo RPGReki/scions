@@ -88,7 +88,7 @@ defaults:
       path: "_posts"
     values:
       category: scions
-      layout: 2020/post
+      layout: 2021/post
       type: post
       lang: "en-CA"
       author: reki
@@ -108,7 +108,7 @@ defaults:
     scope:
       path: "/01-children-of-light-and-darkness"
     values:
-      layout: 2020/chapter
+      layout: 2021/chapter
       type: chapter
       lang: "en-CA"
       author: reki
