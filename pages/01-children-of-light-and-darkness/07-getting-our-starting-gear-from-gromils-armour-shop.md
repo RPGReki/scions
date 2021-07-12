@@ -11,7 +11,7 @@ seo_meta_fix: 1
 editor: jayfeather
 
 redirect_from:
-  - /elemental-children/01-children-of-light-and-darkness/07-gromils-amour-shop/
+  - /elemental-children/01-children-of-light-and-darkness/07
 
 characters:
   main:
