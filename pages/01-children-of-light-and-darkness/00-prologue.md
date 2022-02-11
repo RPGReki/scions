@@ -6,6 +6,9 @@ date: 2020-01-12 01:11
 chapter: 0
 shortlink: /s/1/0/
 
+redirect_from:
+  - /scions/01-children-of-darkness-and-light/00
+
 checker:
   - pwa
   - lt
