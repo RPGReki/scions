@@ -1,0 +1,67 @@
+---
+layout: null
+redirect_from:
+  - /amauga/podcast-ogg.xml
+  - /feeds/amauga/podcast.xml
+  - /feeds/amauga/podcast-ogg.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+{% assign series = "Crystal Down: Scions" %}
+{% assign url = "/scions/" %}
+{% assign image_url = "/scions/thumbnail.webp" %}
+{% assign image_itunes_url = "/scions/itunes.png" %}
+{% assign author = site.data.staff | where: 'id', 'reki' | last %}
+{% assign pages = site.pages | where: "type", "chapter" | where: "book.series", series | sort_natural: "date" | reverse %}
+  <channel>
+    <title>{{ series }}</title>
+    <link>{{ url | absolute_url }}</link>
+    <image>
+      <url>{{ image_itunes_url | absolute_url }}</url>
+      <title>{{ series }}</title>
+      <link>{{ url | absolute_url }}</link>
+    </image>
+
+    <description>Twin orphans grow up in a remote village. They don't know much about their origins but their foster never tells them anything. All they have as the pendants they have.</description>
+    
+    <language>en-CA</language>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+
+    <itunes:author>{{ author.name }}</itunes:author>
+    <itunes:owner>
+      <itunes:name>{{ author.name }}</itunes:name>
+      <itunes:email>{{ author.email }}</itunes:email>
+    </itunes:owner>
+    
+    <itunes:type>serial</itunes:type>
+    <itunes:keywords>web novel,slice of life,fantasy,science fiction</itunes:keywords>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:category text="Fiction" />
+    <copyright>{{ site.copyright.license | strip_html }} {{ site.copyright.name | strip_html }}</copyright>
+
+{% capture now %}{{ 'now'| date: '%s' | plus: 10800 }}{% endcapture %}
+{% for page in pages %}
+  {% capture post_time %}{{ page.date | date: '%s'}}{% endcapture %}
+  {% if jekyll.environment != "unpublished" %}{% if post_time > now %}{% continue %}{% endif %}{% endif %}
+{% unless page.audio %}{% continue %}{% endunless %}
+{% capture description %}{% if page.excerpt %}{{ page.excerpt | markdownify | strip_html | replace: "&thinsp;", " " }}{% else %}{{ page.content | markdownify | strip_html | truncatewords: 50, "…" | replace: "&thinsp;", " " }}{% endif %}{% endcapture %}
+    <item>
+      <title>Chapter {{ page.chapter | prepend: '000' | slice: -3, 3 }}: {{ page.title }}</title>
+      <link>{{ page.url | absolute_url }}</link>
+      <itunes:author>{{ author.name }}</itunes:author>
+      <guid>{{ page.shortlink | absolute_url }}</guid>
+      <pubDate>{{ page.audio.date | date_to_rfc822 }}</pubDate>
+      <description>{{ description }}</description>
+      <itunes:summary>{{ description }}</itunes:summary>
+      {% assign audiopath = page.path | replace: '.md', '.mp3' %}
+      <itunes:duration>{{ audiopath | mp3_duration }}</itunes:duration>
+      {% for mirror in page.book.audio_mirror %}
+      <enclosure type="audio/mpeg" url="{{ audiopath | replace: 'scions/', mirror }}" length="{{ audiopath | file_size }}" />
+      {% endfor %}
+      <enclosure type="audio/mpeg" url="{{ audiopath | prepend: '/' | absolute_url }}" length="{{ audiopath | file_size }}" />
+    </item>{% endfor %}
+  </channel>
+</rss>
